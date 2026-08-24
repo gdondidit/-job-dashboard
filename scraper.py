@@ -37,7 +37,13 @@ SEARCH_TERMS = [
     "rollout specialist",
 ]
 
-SITES = ["indeed", "linkedin", "zip_recruiter", "glassdoor", "google"]
+SITES = ["indeed", "linkedin", "google"]
+# ZipRecruiter and Glassdoor are intentionally left out: GitHub Actions runs on
+# shared cloud servers, and both sites use Cloudflare bot-protection that blocks
+# those IPs outright (403 "forbidden cf-waf") — this isn't a transient error that
+# retrying fixes, it's a permanent block on cloud/datacenter traffic. Indeed,
+# LinkedIn, and Google Jobs don't have this issue and cover the vast majority of
+# postings anyway.
 
 RESULTS_PER_SEARCH = 40  # per term, per site (JobSpy dedupes internally per call)
 MAX_RETRIES = 2
