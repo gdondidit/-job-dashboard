@@ -12,9 +12,13 @@ see, you just adjust filters in the webpage.
 
 import json
 import time
+import math
 import random
 import datetime
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutureTimeoutError
 from jobspy import scrape_jobs
+
+TERM_TIMEOUT_SECONDS = 90  # give up on a search term if it hasn't responded by then
 
 # Category: Implementation & Onboarding (SaaS, healthcare, fintech, and general).
 # Feel free to add more terms here later — each one runs as its own search.
@@ -110,8 +114,10 @@ def run():
         term_result = {"term": term, "count": 0, "error": None}
 
         for attempt in range(1, MAX_RETRIES + 2):  # e.g. 1 initial + 2 retries = 3 tries
+            executor = ThreadPoolExecutor(max_workers=1)
             try:
-                jobs = scrape_jobs(
+                future = executor.submit(
+                    scrape_jobs,
                     site_name=SITES,
                     search_term=term,
                     google_search_term=f"{term} jobs remote",
@@ -121,12 +127,23 @@ def run():
                     is_remote=True,
                     country_indeed="USA",
                 )
+                jobs = future.result(timeout=TERM_TIMEOUT_SECONDS)
                 count = len(jobs) if jobs is not None else 0
                 print(f"    -> {count} results (attempt {attempt})")
                 if jobs is not None and count > 0:
                     all_jobs.append(jobs)
                 term_result["count"] = count
+                executor.shutdown(wait=False)
                 break  # success (even if 0 results, that's a real answer, not an error)
+            except FutureTimeoutError:
+                print(f"    !! attempt {attempt} timed out after {TERM_TIMEOUT_SECONDS}s (a site likely hung) — moving on")
+                term_result["error"] = f"Timed out after {TERM_TIMEOUT_SECONDS}s"
+                # Don't wait for the hung thread — abandon it and keep going.
+                executor.shutdown(wait=False)
+                if attempt <= MAX_RETRIES:
+                    backoff = BASE_DELAY_SECONDS * attempt
+                    print(f"    retrying in {backoff}s...")
+                    time.sleep(backoff)
             except Exception as e:
                 print(f"    !! attempt {attempt} failed: {e}")
                 term_result["error"] = str(e)
@@ -150,6 +167,16 @@ def run():
         df = df.drop_duplicates(subset=["job_url"])
         df = df.where(pd.notnull(df), None)
         combined = df.to_dict(orient="records")
+
+        # Belt-and-suspenders NaN cleanup: pandas silently converts None back to
+        # NaN for float-typed columns (a known quirk), so the .where() above can't
+        # fully guarantee clean values. A literal NaN breaks JSON parsing in the
+        # browser, so scrub any that slipped through here, after conversion to
+        # plain Python dicts where this coercion no longer applies.
+        for job in combined:
+            for key, value in job.items():
+                if isinstance(value, float) and math.isnan(value):
+                    job[key] = None
 
     for job in combined:
         job["degree_requirement"] = classify_degree_requirement(job.get("description"))
