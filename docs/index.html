@@ -661,7 +661,7 @@ async function init() {
     allJobs = data.jobs || [];
     updateGauge(data.last_updated);
   } catch (e) {
-    document.getElementById("gauge-text").textContent = "Couldn't load jobs.json yet.";
+    document.getElementById("gauge-text").textContent = "Couldn't load jobs.json: " + e.message;
   }
   render();
 }
