@@ -1,0 +1,42 @@
+name: Scrape Jobs
+
+on:
+  schedule:
+    # Runs every 30 minutes. Note: 15 minutes was considered but risks overlapping
+    # runs and getting rate-limited/blocked by job sites (worse results, not better).
+    # 30 min is a safer balance between freshness and reliability.
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}  # lets you click "Run workflow" manually on GitHub too
+
+concurrency:
+  group: scrape-jobs
+  cancel-in-progress: false  # if a run is still going, queue the next one instead of colliding
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Commit updated job data
+        run: |
+          git config user.name "job-scraper-bot"
+          git config user.email "actions@github.com"
+          git add docs/jobs.json docs/run_log.json
+          git diff --quiet --cached || git commit -m "Update job listings"
+          git push
