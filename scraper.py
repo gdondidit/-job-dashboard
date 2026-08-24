@@ -49,6 +49,25 @@ SITES = ["indeed", "linkedin", "google"]
 # LinkedIn, and Google Jobs don't have this issue and cover the vast majority of
 # postings anyway.
 
+# Search sites match keywords anywhere in a posting (title AND description), so
+# broad search terms like "implementation" pull in unrelated jobs that just
+# happen to mention the word somewhere in their text. This list enforces a
+# stricter rule after the fact: a job only survives if one of these phrases
+# actually appears in its TITLE, not just buried in the description.
+TITLE_MATCH_KEYWORDS = [
+    "implementation",
+    "onboarding",
+    "emr",
+    "ehr",
+    "clinical systems",
+    "health information",
+    "training specialist",
+    "training coordinator",
+    "escalation",
+    "deployment specialist",
+    "rollout specialist",
+]
+
 RESULTS_PER_SEARCH = 40  # per term, per site (JobSpy dedupes internally per call)
 MAX_RETRIES = 2
 BASE_DELAY_SECONDS = 8  # delay between search terms, helps avoid rate limiting/blocking
@@ -165,6 +184,29 @@ def run():
         df = pd.concat(all_jobs, ignore_index=True)
         # De-duplicate on job_url (same job can appear across search terms)
         df = df.drop_duplicates(subset=["job_url"])
+
+        # Safety net: some sites (Indeed especially) don't strictly honor the
+        # is_remote request and hand back on-site jobs anyway. Drop anything
+        # explicitly marked non-remote — keep only True or genuinely unknown,
+        # since dropping "unknown" too aggressively would lose real remote jobs
+        # that just weren't tagged.
+        before_count = len(df)
+        df = df[df["is_remote"] != False]
+        dropped = before_count - len(df)
+        if dropped > 0:
+            print(f"  Filtered out {dropped} job(s) explicitly marked non-remote (site filter didn't catch them)")
+
+        # Strict title filter: search sites match keywords anywhere in a posting,
+        # so a job whose TITLE doesn't actually contain one of our target phrases
+        # gets dropped, even if it matched during the search.
+        before_count = len(df)
+        title_lower = df["title"].fillna("").str.lower()
+        title_mask = title_lower.apply(lambda t: any(kw in t for kw in TITLE_MATCH_KEYWORDS))
+        df = df[title_mask]
+        dropped = before_count - len(df)
+        if dropped > 0:
+            print(f"  Filtered out {dropped} job(s) whose title didn't actually match a target category")
+
         df = df.where(pd.notnull(df), None)
         combined = df.to_dict(orient="records")
 
