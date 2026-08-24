@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F3F1EA;
+    --card: #FBFAF6;
+    --ink: #23281F;
+    --ink-soft: #6B6A5E;
+    --line: #DEDACC;
+    --teal: #2F6F62;
+    --teal-soft: #E4EEEA;
+    --amber: #B9862E;
+    --amber-soft: #F4E9D6;
+    --rust: #B5502F;
+    --rust-soft: #F5E3DB;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    padding: 28px 20px 0;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 6px;
+  }
+  header h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    margin: 0 0 18px;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+
+  /* Signature element: freshness gauge */
+  .gauge-wrap {
+    border: 1px solid var(--line);
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .gauge-dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .gauge-dot::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    border: 1px solid var(--teal);
+    opacity: 0.5;
+    animation: pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(0.7); opacity: 0.6; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+  .gauge-text { font-size: 13px; color: var(--ink-soft); flex: 1; }
+  .gauge-text strong { color: var(--ink); font-weight: 600; }
+  .gauge-track {
+    width: 90px;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--line);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .gauge-fill { height: 100%; border-radius: 999px; }
+
+  .refresh-link {
+    font-size: 12px;
+    color: var(--teal);
+    text-decoration: none;
+    border: 1px solid var(--teal);
+    border-radius: 999px;
+    padding: 5px 11px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .refresh-link:hover { background: var(--teal-soft); }
+
+  .new-badge {
+    background: var(--rust);
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 2px 7px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+
+  .filters {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .filter-group .filter-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 13px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.12s ease;
+    color: var(--ink-soft);
+  }
+  .chip:hover { border-color: var(--teal); }
+  .chip.active {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+    font-weight: 500;
+  }
+  .chip.degree-active-Not-mentioned { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .chip.degree-active-Degree-preferred { background: var(--amber); border-color: var(--amber); color: #fff; }
+  .chip.degree-active-Degree-required { background: var(--rust); border-color: var(--rust); color: #fff; }
+  .chip.degree-active-Unknown { background: var(--ink-soft); border-color: var(--ink-soft); color: #fff; }
+
+  .pay-input {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 6px 5px 13px;
+    font-size: 13px;
+  }
+  .pay-input span { color: var(--ink-soft); }
+  .pay-input input {
+    width: 60px;
+    border: none;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+    padding: 4px 2px;
+  }
+  .pay-input input:focus { outline: none; }
+
+  .view-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    width: fit-content;
+  }
+  .view-tab {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--ink-soft);
+    user-select: none;
+  }
+  .view-tab.active { background: var(--teal); color: #fff; font-weight: 500; }
+  .view-tab .count { opacity: 0.7; font-size: 11px; margin-left: 3px; }
+
+  .job-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .action-btn {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--ink-soft);
+    transition: all 0.12s ease;
+    flex-shrink: 0;
+  }
+  .action-btn:hover { border-color: var(--teal); }
+  .action-btn.fav-active { background: var(--amber-soft); border-color: var(--amber); color: var(--amber); }
+  .action-btn.applied-active { background: var(--teal-soft); border-color: var(--teal); color: var(--teal); }
+  .action-btn.hide-active { background: var(--rust-soft); border-color: var(--rust); color: var(--rust); }
+  .job.is-applied { border-left: 3px solid var(--teal); }
+  .restore-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restore-btn {
+    font-size: 12px;
+    color: var(--teal);
+    cursor: pointer;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+  }
+
+  #status {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  #jobs {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .job {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    transition: border-color 0.12s ease;
+  }
+  .job:hover { border-color: var(--teal); }
+  .job .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .job h3 {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+  .job h3 a { color: var(--ink); text-decoration: none; }
+  .job h3 a:hover { color: var(--teal); }
+  .job .company { color: var(--teal); font-size: 13px; font-weight: 500; margin-bottom: 8px; }
+  .job .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    align-items: center;
+  }
+  .job .meta .tag {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .job .pay {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--teal);
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .degree-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 6px;
+  }
+  .degree-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+  }
+  .degree-Not-mentioned { background: var(--teal-soft); color: var(--teal); }
+  .degree-Not-mentioned::before { background: var(--teal); }
+  .degree-Degree-preferred { background: var(--amber-soft); color: var(--amber); }
+  .degree-Degree-preferred::before { background: var(--amber); }
+  .degree-Degree-required { background: var(--rust-soft); color: var(--rust); }
+  .degree-Degree-required::before { background: var(--rust); }
+  .degree-Unknown { background: var(--line); color: var(--ink-soft); }
+  .degree-Unknown::before { background: var(--ink-soft); }
+
+  .job .desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    max-height: 3.6em;
+    overflow: hidden;
+    line-height: 1.5;
+  }
+
+  #empty {
+    text-align: center;
+    color: var(--ink-soft);
+    padding: 50px 16px;
+    display: none;
+    font-size: 14px;
+  }
+  #empty .eyebrow {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gauge-dot::after { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Implementation &amp; Onboarding · Remote</div>
+  <h1>Job Board</h1>
+  <p>Scraped automatically, filtered by what actually fits.</p>
+
+  <div class="gauge-wrap">
+    <div class="gauge-dot"></div>
+    <div class="gauge-text" id="gauge-text">Loading last scan…</div>
+    <div class="gauge-track"><div class="gauge-fill" id="gauge-fill" style="width:0%; background:var(--teal);"></div></div>
+    <a class="refresh-link" href="https://github.com/gdondidit/job-dashboard/actions/workflows/scrape.yml" target="_blank" rel="noopener">Run fresh scrape →</a>
+  </div>
+</header>
+
+<div class="filters">
+  <div class="filter-group">
+    <div class="view-tabs" id="view-tabs"></div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Job title</span>
+    <div class="chip-row" id="title-chips"></div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Posted</span>
+    <div class="chip-row" id="posted-chips"></div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Education requirement</span>
+    <div class="chip-row" id="degree-chips"></div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Pay</span>
+    <div class="chip-row">
+      <div class="pay-input">
+        <span>$</span>
+        <input type="number" id="f-minpay" placeholder="min /hr">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="status"></div>
+<div id="jobs"></div>
+<div id="empty"><span class="eyebrow">Nothing matches yet</span>Try loosening a filter above.</div>
+
+<script>
+const TITLE_CATEGORIES = [
+  "implementation", "onboarding", "EMR", "EHR",
+  "clinical systems", "health information", "training",
+  "escalation", "deployment", "rollout",
+];
+const DEGREE_CATEGORIES = ["Not mentioned", "Degree preferred", "Degree required", "Unknown"];
+const POSTED_CATEGORIES = [
+  { key: "1h", label: "Last hour", ms: 1 * 3600 * 1000 },
+  { key: "6h", label: "Last 6 hours", ms: 6 * 3600 * 1000 },
+  { key: "24h", label: "Last 24 hours", ms: 24 * 3600 * 1000 },
+];
+
+const DEFAULTS = { minpay: "", titles: [], degrees: [], posted: "" };
+// When this dashboard was last opened — used to flag "New" jobs since then.
+const lastVisit = localStorage.getItem("jobDashboardLastVisit");
+localStorage.setItem("jobDashboardLastVisit", new Date().toISOString());
+let allJobs = [];
+let prefs = loadPrefs();
+let currentView = localStorage.getItem("jobDashboardView") || "all";
+
+function loadPrefs() {
+  try {
+    return { ...DEFAULTS, ...JSON.parse(localStorage.getItem("jobDashboardPrefs") || "{}") };
+  } catch { return { ...DEFAULTS }; }
+}
+function savePrefs() {
+  localStorage.setItem("jobDashboardPrefs", JSON.stringify(prefs));
+}
+
+// Per-job state (favorite / applied / hidden), keyed by job URL, stored locally in this browser.
+function loadJobStates() {
+  try { return JSON.parse(localStorage.getItem("jobDashboardStates") || "{}"); }
+  catch { return {}; }
+}
+function saveJobStates(states) {
+  localStorage.setItem("jobDashboardStates", JSON.stringify(states));
+}
+function getJobState(url) {
+  const states = loadJobStates();
+  return states[url] || { favorite: false, applied: false, hidden: false };
+}
+function setJobState(url, patch) {
+  const states = loadJobStates();
+  states[url] = { ...getJobState(url), ...patch };
+  saveJobStates(states);
+}
+
+function buildChips(containerId, values, activeValues, onToggle, degreeStyle) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = "";
+  values.forEach(val => {
+    const isActive = activeValues.includes(val);
+    const chip = document.createElement("div");
+    let cls = "chip" + (isActive ? " active" : "");
+    if (degreeStyle && isActive) {
+      cls += " degree-active-" + val.replace(/\s+/g, "-");
+    }
+    chip.className = cls;
+    chip.textContent = val;
+    chip.addEventListener("click", () => onToggle(val));
+    container.appendChild(chip);
+  });
+}
+
+function payOf(job) {
+  const vals = [job.min_amount, job.max_amount].filter(v => v !== null && v !== undefined && v !== "");
+  if (vals.length === 0) return null;
+  return Math.max(...vals.map(Number));
+}
+
+function updateGauge(lastUpdated) {
+  const fill = document.getElementById("gauge-fill");
+  const text = document.getElementById("gauge-text");
+  if (!lastUpdated) {
+    text.innerHTML = "No scan yet — run the workflow once to get started.";
+    fill.style.width = "0%";
+    return;
+  }
+  const hoursAgo = (Date.now() - new Date(lastUpdated).getTime()) / 3600000;
+  let pct, color, label;
+  if (hoursAgo < 5) { pct = 100; color = "var(--teal)"; label = "Fresh"; }
+  else if (hoursAgo < 12) { pct = 60; color = "var(--amber)"; label = "Aging"; }
+  else { pct = 25; color = "var(--rust)"; label = "Stale — check Actions tab"; }
+  fill.style.width = pct + "%";
+  fill.style.background = color;
+  text.innerHTML = `<strong>${label}</strong> · last scan ${new Date(lastUpdated).toLocaleString()}`;
+}
+
+function buildViewTabs() {
+  const states = loadJobStates();
+  const counts = { all: 0, favorites: 0, applied: 0, hidden: 0 };
+  allJobs.forEach(job => {
+    const s = getJobState(job.job_url);
+    if (s.hidden) counts.hidden++;
+    else {
+      counts.all++;
+      if (s.favorite) counts.favorites++;
+      if (s.applied) counts.applied++;
+    }
+  });
+  const tabs = [
+    { key: "all", label: "All", count: counts.all },
+    { key: "favorites", label: "To Apply", count: counts.favorites },
+    { key: "applied", label: "Applied", count: counts.applied },
+    { key: "hidden", label: "Hidden", count: counts.hidden },
+  ];
+  const container = document.getElementById("view-tabs");
+  container.innerHTML = "";
+  tabs.forEach(t => {
+    const el = document.createElement("div");
+    el.className = "view-tab" + (currentView === t.key ? " active" : "");
+    el.innerHTML = `${t.label}<span class="count">${t.count}</span>`;
+    el.addEventListener("click", () => {
+      currentView = t.key;
+      localStorage.setItem("jobDashboardView", currentView);
+      render();
+    });
+    container.appendChild(el);
+  });
+}
+
+function render() {
+  prefs.minpay = document.getElementById("f-minpay").value;
+  savePrefs();
+  buildViewTabs();
+
+  buildChips("title-chips", TITLE_CATEGORIES, prefs.titles, (val) => {
+    prefs.titles = prefs.titles.includes(val) ? prefs.titles.filter(v => v !== val) : [...prefs.titles, val];
+    render();
+  });
+  buildChips("degree-chips", DEGREE_CATEGORIES, prefs.degrees, (val) => {
+    prefs.degrees = prefs.degrees.includes(val) ? prefs.degrees.filter(v => v !== val) : [...prefs.degrees, val];
+    render();
+  }, true);
+
+  // Posted-time chips are single-select: clicking the active one clears it.
+  const postedContainer = document.getElementById("posted-chips");
+  postedContainer.innerHTML = "";
+  POSTED_CATEGORIES.forEach(cat => {
+    const chip = document.createElement("div");
+    chip.className = "chip" + (prefs.posted === cat.key ? " active" : "");
+    chip.textContent = cat.label;
+    chip.addEventListener("click", () => {
+      prefs.posted = prefs.posted === cat.key ? "" : cat.key;
+      render();
+    });
+    postedContainer.appendChild(chip);
+  });
+
+  let filtered = allJobs.filter(job => {
+    const title = (job.title || "").toLowerCase();
+    const degree = job.degree_requirement || "Unknown";
+    const state = getJobState(job.job_url);
+
+    // View tab logic first
+    if (currentView === "hidden") { if (!state.hidden) return false; }
+    else {
+      if (state.hidden) return false;
+      if (currentView === "favorites" && !state.favorite) return false;
+      if (currentView === "applied" && !state.applied) return false;
+    }
+
+    if (prefs.titles.length > 0 && !prefs.titles.some(t => title.includes(t.toLowerCase()))) return false;
+    if (prefs.degrees.length > 0 && !prefs.degrees.includes(degree)) return false;
+    if (prefs.posted) {
+      const cat = POSTED_CATEGORIES.find(c => c.key === prefs.posted);
+      const postedDate = job.date_posted ? new Date(job.date_posted) : null;
+      if (!postedDate || (Date.now() - postedDate.getTime()) > cat.ms) return false;
+    }
+    if (prefs.minpay) {
+      const pay = payOf(job);
+      if (pay === null || pay < Number(prefs.minpay)) return false;
+    }
+    return true;
+  });
+
+  filtered.sort((a, b) => new Date(b.date_posted || 0) - new Date(a.date_posted || 0));
+
+  document.getElementById("status").textContent = `${filtered.length} of ${allJobs.length} roles shown`;
+
+  const container = document.getElementById("jobs");
+  container.innerHTML = "";
+  document.getElementById("empty").style.display = filtered.length === 0 ? "block" : "none";
+
+  for (const job of filtered) {
+    const pay = payOf(job);
+    const payLabel = pay ? `$${pay}/hr` : "";
+    const degree = job.degree_requirement || "Unknown";
+    const degreeSlug = degree.replace(/\s+/g, "-");
+    const state = getJobState(job.job_url);
+    const div = document.createElement("div");
+    div.className = "job" + (state.applied ? " is-applied" : "");
+
+    const actionsHtml = currentView === "hidden"
+      ? `<div class="job-actions"><button class="action-btn" data-action="restore" title="Restore">↺</button></div>`
+      : `<div class="job-actions">
+          <button class="action-btn${state.favorite ? " fav-active" : ""}" data-action="favorite" title="Add to To Apply bucket">★</button>
+          <button class="action-btn${state.applied ? " applied-active" : ""}" data-action="applied" title="Mark applied">✓</button>
+          <button class="action-btn${state.hidden ? " hide-active" : ""}" data-action="hide" title="Not interested">✕</button>
+        </div>`;
+
+    // "New" badge: posted since your last visit to this dashboard.
+    const isNew = lastVisit && job.date_posted && new Date(job.date_posted) > new Date(lastVisit);
+
+    div.innerHTML = `
+      <div class="top-row">
+        <h3><a href="${job.job_url || '#'}" target="_blank" rel="noopener">${job.title || "Untitled role"}</a>${isNew ? ' <span class="new-badge">New</span>' : ''}</h3>
+        ${actionsHtml}
+      </div>
+      <div class="company">${job.company || "Unknown company"}</div>
+      <div class="meta">
+        ${job.location ? `<span class="tag">${job.location}</span>` : ""}
+        ${job.site ? `<span class="tag">${job.site}</span>` : ""}
+        ${job.date_posted ? `<span class="tag">${job.date_posted}</span>` : ""}
+        ${payLabel ? `<span class="pay">${payLabel}</span>` : ""}
+        <span class="degree-tag degree-${degreeSlug}">${degree}</span>
+      </div>
+      <div class="desc">${(job.description || "").slice(0, 220)}</div>
+    `;
+
+    div.querySelectorAll(".action-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const action = btn.dataset.action;
+        if (action === "favorite") setJobState(job.job_url, { favorite: !state.favorite });
+        if (action === "applied") setJobState(job.job_url, { applied: !state.applied });
+        if (action === "hide") setJobState(job.job_url, { hidden: true });
+        if (action === "restore") setJobState(job.job_url, { hidden: false });
+        render();
+      });
+    });
+
+    container.appendChild(div);
+  }
+}
+
+async function init() {
+  document.getElementById("f-minpay").value = prefs.minpay;
+  document.getElementById("f-minpay").addEventListener("input", render);
+
+  try {
+    const res = await fetch("jobs.json?_=" + Date.now());
+    const data = await res.json();
+    allJobs = data.jobs || [];
+    updateGauge(data.last_updated);
+  } catch (e) {
+    document.getElementById("gauge-text").textContent = "Couldn't load jobs.json yet.";
+  }
+  render();
+}
+
+init();
+</script>
+</body>
+</html>
