@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-08-25T05:38:41.140507Z",
-  "total_jobs_saved": 11,
+  "last_run": "2026-08-25T06:52:05.477036Z",
+  "total_jobs_saved": 13,
   "per_term_results": [
     {
       "term": "implementation",
@@ -44,12 +44,12 @@
     },
     {
       "term": "EMR implementation specialist",
-      "count": 64,
+      "count": 65,
       "error": null
     },
     {
       "term": "EHR implementation specialist",
-      "count": 55,
+      "count": 54,
       "error": null
     },
     {
