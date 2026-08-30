@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-30T21:29:53.468845Z",
-  "count": 4,
+  "last_updated": "2026-08-30T23:50:14.463292Z",
+  "count": 5,
   "jobs": [
     {
       "id": "li-4458055736",
@@ -149,6 +149,43 @@
       "vacancy_count": null,
       "work_from_home_type": null,
       "degree_requirement": "Not mentioned"
+    },
+    {
+      "id": "li-4450040690",
+      "site": "linkedin",
+      "job_url": "https://www.linkedin.com/jobs/view/4450040690",
+      "job_url_direct": null,
+      "title": "DEXIS Regional Clinical Training Specialist (Remote-WA/AK/N. ID/MT)",
+      "company": "DEXIS",
+      "location": "Seattle, WA",
+      "date_posted": "2026-08-28",
+      "job_type": null,
+      "salary_source": null,
+      "interval": null,
+      "min_amount": null,
+      "max_amount": null,
+      "currency": null,
+      "is_remote": true,
+      "job_level": "",
+      "job_function": null,
+      "listing_type": null,
+      "emails": null,
+      "description": null,
+      "company_industry": null,
+      "company_url": "https://www.linkedin.com/company/dexisimaging",
+      "company_logo": null,
+      "company_url_direct": null,
+      "company_addresses": null,
+      "company_num_employees": null,
+      "company_revenue": null,
+      "company_description": null,
+      "skills": null,
+      "experience_range": null,
+      "company_rating": null,
+      "company_reviews_count": null,
+      "vacancy_count": null,
+      "work_from_home_type": null,
+      "degree_requirement": "Unknown"
     }
   ]
 }
