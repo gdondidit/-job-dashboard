@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-09-08T04:30:47.248401Z",
-  "total_jobs_saved": 7,
+  "last_run": "2026-09-08T09:07:00.650018Z",
+  "total_jobs_saved": 6,
   "per_term_results": [
     {
       "term": "implementation",
@@ -54,7 +54,7 @@
     },
     {
       "term": "clinical systems analyst",
-      "count": 80,
+      "count": 79,
       "error": null
     },
     {
