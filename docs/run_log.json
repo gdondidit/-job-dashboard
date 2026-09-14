@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-09-14T03:38:20.530031Z",
-  "total_jobs_saved": 22,
+  "last_run": "2026-09-14T09:42:29.253470Z",
+  "total_jobs_saved": 18,
   "per_term_results": [
     {
       "term": "implementation",
@@ -44,12 +44,12 @@
     },
     {
       "term": "EMR implementation specialist",
-      "count": 54,
+      "count": 69,
       "error": null
     },
     {
       "term": "EHR implementation specialist",
-      "count": 48,
+      "count": 47,
       "error": null
     },
     {
@@ -59,7 +59,7 @@
     },
     {
       "term": "health information management analyst",
-      "count": 70,
+      "count": 66,
       "error": null
     },
     {
