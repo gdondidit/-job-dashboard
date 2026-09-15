@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-15T07:20:32.860068Z",
+  "last_updated": "2026-09-15T12:54:28.662770Z",
   "count": 3,
   "jobs": [
     {
@@ -40,28 +40,28 @@
       "degree_requirement": "Unknown"
     },
     {
-      "id": "in-4c06b2383dc9d057",
-      "site": "indeed",
-      "job_url": "https://www.indeed.com/viewjob?jk=4c06b2383dc9d057",
-      "job_url_direct": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=28fb1cde-679f-445d-9398-762fa9824f33&ccId=19000101_000001&jobId=572447&source=IN&lang=en_US",
-      "title": "Director, Program Replication and Implementation",
-      "company": "Parents as Teachers",
-      "location": "US",
-      "date_posted": "2026-09-14",
-      "job_type": "fulltime",
+      "id": "li-4467241864",
+      "site": "linkedin",
+      "job_url": "https://www.linkedin.com/jobs/view/4467241864",
+      "job_url_direct": null,
+      "title": "Senior Client Implementation Specialist (Remote)",
+      "company": "ForFutures Financial, Planning, a financial advisory practice of Ameriprise Financial Services LLC",
+      "location": "California, United States",
+      "date_posted": null,
+      "job_type": null,
       "salary_source": null,
       "interval": null,
       "min_amount": null,
       "max_amount": null,
       "currency": null,
       "is_remote": true,
-      "job_level": null,
+      "job_level": "",
       "job_function": null,
       "listing_type": null,
       "emails": null,
-      "description": "Program Summary\n\n\nThe Director of Program Replication and Implementation provides strategic leadership for the national implementation of the Parents as Teachers evidence\\-based home visiting model and other programs. This position leads the development of systems, processes, and resources that support high\\-quality implementation across a diverse network of affiliates and program partners throughout the United States.\nThe Director of Replication \\& Implementation provides strategic leadership for the implementation, replication, and operational support systems that sustain high\\-quality delivery of the Parents as Teachers across a diverse network of affiliates and programs. The position oversees implementation support, model fidelity initiatives, and replication strategies while providing leadership for teams responsible for implementation assistance, affiliate support systems, Head Start implementation support, and specialized state and community implementation initiatives.\nThe Director oversees program implementation support, model fidelity initiatives, affiliate quality improvement while leading a team of implementation specialists. Working collaboratively across departments, the Director translates research, policy, and field experience into practical implementation strategies that strengthen affiliate capacity, improve outcomes, and ensure consistent program fidelity. This role also serves as a key organizational leader responsible for advancing strategic priorities, fostering innovation, and building partnerships with state leaders, funders, and national stakeholders.\n\n*Essential Functions*\n\n**Strategic Leadership and Team Operations (35%)**\n\n**Strategic Leadership**\n\n* Lead organizational responses to implementation challenges affecting affiliate quality and sustainability.\n* Lead organizational responses to implementation challenges affecting curriculum partner sustainability.\n* Identify opportunities to improve affiliate implementation through technology, system enhancements, and innovation.\n* Provide leadership for specialized implementation initiatives, including Indigenous, state\\-based, and federally funded implementation projects.\n* Ensure alignment between implementation support systems and organizational strategic priorities.\n* Develop recommendations for policy, procedures, and model implementation improvements. Analyze implementation data, affiliate performance, and environmental trends to identify risks and opportunities.\n* Balance competing organizational priorities while ensuring consistent implementation of the Parents as Teachers model and other partner programs.\n* Lead curriculum partner implementation and oversight.\n\n**Operations**\n\n* Lead the strategic direction, operations, and continuous improvement of the Program Replication team.\n* Ensure integration of implementation support strategies across affiliate operations, technical assistance, and specialized implementation initiatives.\n* Oversee implementation support provided to Head Start, Indigenous communities, and other specialized implementation settings.\n* Design and oversee implementation support systems that promote high\\-quality, evidence\\-based replication of the Parents as Teachers model.\n* Establish team priorities, annual work plans, performance measures, and operational goals aligned with organizational strategic initiatives.\n* Develop implementation resources, technical assistance strategies, and tools that strengthen affiliate capacity and improve model fidelity.\n* Use implementation data, affiliate outcomes, and field feedback to identify trends, evaluate effectiveness, and drive continuous improvement.\n* Ensure consistency in implementation support across regions through standardized processes, documentation, and quality assurance practices.\n\n **Team Leadership and Talent Development: (25%)**\n\n* Provide leadership, coaching, and supervision to a geographically dispersed team of implementation professionals.\n* Foster a collaborative, high\\-performing culture focused on innovation, accountability, and continuous improvement.\n* Establish performance expectations and support professional growth through coaching, mentoring, and performance management.\n* Allocate staff resources and workloads to meet organizational priorities.\n* Lead departmental planning, budgeting, and project management.\n\n\n**Cross\\-departmental leadership and Organizational Initiatives (15%)**\n\n* Serve as an organizational lead on implementation science and model replication.\n* Collaborate with Research and Quality to translate evaluation findings into implementation practices.\n* Partner with Programmatic Data Management to identify implementation trends and support data\\-informed decision making.\n* Support organizational readiness for expansion and replication opportunities through implementation planning and capacity building.\n* Partner with Training and Curriculum to align professional development with implementation needs.\n* Collaborate with Government and Community Relations regarding federal initiatives, expansion opportunities, and implementation guidance.\n* Provide implementation expertise to executive leadership during strategic planning.\n\n**Data and Innovation (10%)**\n\n**Data Responsibilities*** Monitor implementation metrics, fidelity indicators, and quality benchmarks.\n* Use data to prioritize technical assistance and evaluate departmental effectiveness.\n* Partner with Programmatic Data Management, Research, and Quality Improvement to monitor implementation outcomes, identify trends, and guide continuous improvement efforts.\n* Utilize implementation, fidelity, and operational data to prioritize resources and strengthen affiliate success.\n\n**Innovation**\n\n* Identify opportunities to improve implementation through technology, automation, and emerging practices.\n* Lead the development of innovative implementation support strategies that improve efficiency and user experience.\n* Evaluate new approaches for scaling high\\-quality implementation across diverse settings.\n\n**External Partnerships and Representation (10%)**\n\n* Represent Parents as Teachers with state systems, national organizations, funders, and implementation partners.\n* Build relationships that support expansion of Parents as Teachers.\n* Present at conferences, webinars, and professional meetings.\n\nConsult with state leaders regarding implementation and sustainability.  \n* \n\n  \n\n**Education and Experience**\n\n* Bachelor\u2019s degree in social services or any related field required.\n* Master\u2019s degree preferred.\n* Ten years of progressive experience in progressively responsible administrative, supervisory and/or organizational development experience.\n* Significant familiarity with Parents as Teachers is required.",
+      "description": null,
       "company_industry": null,
-      "company_url": "https://www.indeed.com/cmp/Parents-As-Teachers",
+      "company_url": "https://www.linkedin.com/company/forffutures-financial-planning-ltd",
       "company_logo": null,
       "company_url_direct": null,
       "company_addresses": null,
@@ -74,7 +74,7 @@
       "company_reviews_count": null,
       "vacancy_count": null,
       "work_from_home_type": null,
-      "degree_requirement": "Degree preferred"
+      "degree_requirement": "Unknown"
     },
     {
       "id": "in-69f37fa0e9967454",
