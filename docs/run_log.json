@@ -1,15 +1,15 @@
 {
-  "last_run": "2026-09-19T06:37:31.837273Z",
-  "total_jobs_saved": 7,
+  "last_run": "2026-09-19T11:54:44.244177Z",
+  "total_jobs_saved": 8,
   "per_term_results": [
     {
       "term": "implementation",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
       "term": "onboarding",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
@@ -29,12 +29,12 @@
     },
     {
       "term": "implementation specialist",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
       "term": "implementation consultant",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "term": "EMR implementation specialist",
-      "count": 66,
+      "count": 69,
       "error": null
     },
     {
@@ -59,12 +59,12 @@
     },
     {
       "term": "health information management analyst",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
       "term": "customer training specialist",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
