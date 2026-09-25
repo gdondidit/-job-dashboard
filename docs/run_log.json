@@ -1,76 +1,76 @@
 {
-  "last_run": "2026-09-25T00:33:10.148224Z",
-  "total_jobs_saved": 10,
+  "last_run": "2026-09-25T05:34:41.969190Z",
+  "total_jobs_saved": 0,
   "per_term_results": [
     {
       "term": "implementation",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dimplementation%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGKCG2NUGIjBt3A18hRq-bZNSR6a6c3xsIKjJwJ45bCiGZBaHjHeCs4kvrc_jr5rOfjaxZhBf5UcyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "onboarding",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Donboarding%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGP-G2NUGIjAVbO4BAbAbKF_unHbBRI3EFa6T5szSko-ddvQHIZ9K6AQaFWjzSaWdXQbnDee4bVYyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "client onboarding specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dclient%2Bonboarding%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGOeH2NUGIjBTqzB5ZGToz3uAjKU7_lcz1YyCuYMFQ5v-RWtHNN6mxgssOQC1CZZv2QnKbLgJPCoyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "customer onboarding specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dcustomer%2Bonboarding%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGMSI2NUGIjAd9EQdqq2Yjy1eDKaSOjNPLkzHIlEXdnR7eU97kqvSfVMg2iMh3J6WretUqgmOyvAyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "senior onboarding specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dsenior%2Bonboarding%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGJ2J2NUGIjBh_ulijifoZu4P-YyM-WBIaTQHR8ffObZDE-6WhTbkUn0y2EBgTCMo30rtKUCrFjMyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "implementation specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dimplementation%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGO6J2NUGIjD2YnZjWAwBofdBFuw5k8mRXt46QknGj4SziW3L3-1ee8trpa4bxgP1RhAQD3pmvAwyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "implementation consultant",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dimplementation%2Bconsultant%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGMCK2NUGIjDqbOnbFCLK3dTrvUpWKlTNR-WuvH8uiuU23ymEMzRrCxWNxFPvMAeCnCFyQEWNI2AyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dhealthcare%2Bimplementation%2Bconsultant%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGJKL2NUGIjBnNB9Xg7K7XAD7oXn3xUZq4QdmkARfy9VVcojlrA7pYEpUDlxJl8rbbkfgjNRwkpkyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "EMR implementation specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3DEMR%2Bimplementation%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGOqL2NUGIjDG6M0tjDzQ4AFh0NnfrRf7MORLosjvnfA2Uka0_JuXAkG2ilnB5JSyn0OWrHLfsHwyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "EHR implementation specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3DEHR%2Bimplementation%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGL2M2NUGIjAHluynYmpQTPjt8Uncvjo27ydDlIN3PnceRP9RoFoyEOIet0Y4Jx3-2rCBJs-FYLUyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "clinical systems analyst",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dclinical%2Bsystems%2Banalyst%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGJeN2NUGIjBuZV5pj3juWTE8bvO-jz7Vgaj_bpq7OoId6_v4wlG4ptPoKFra4dwCBsamabSSgL8yAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "health information management analyst",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dhealth%2Binformation%2Bmanagement%2Banalyst%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGOmN2NUGIjBYyL9rxLZ9x9d67U1VdutNPeNa0FeTZiOxKHN8VW72SRQrS8jTTJKRrrbR-VyT1pwyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "customer training specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Dcustomer%2Btraining%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGMKO2NUGIjBBTxDE2V0zIixeQYbA9dUR7NzMYfxselAPiCDCxd6SLbowLdUVeSnjEkfnYrzKC3oyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "escalation specialist",
-      "count": 80,
-      "error": null
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /sorry/index?continue=https://www.google.com/search%3Fq%3Descalation%2Bspecialist%2Bjobs%2Bremote%26udm%3D8&q=EgQUo_bTGJqP2NUGIjBN0eu9jSpqLZG-sdxvG1cOpe-IzAzvVWqpgnyaCU-FFIaHJxDqaoPlXBUCyG-2NPcyAnJSWgFD (Caused by ResponseError('too many 429 error responses'))"
     },
     {
       "term": "deployment specialist",
