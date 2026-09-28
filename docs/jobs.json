@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-27T23:22:14.671601Z",
-  "count": 9,
+  "last_updated": "2026-09-28T01:58:58.628126Z",
+  "count": 8,
   "jobs": [
     {
       "id": "li-4470532693",
@@ -297,43 +297,6 @@
       "vacancy_count": null,
       "work_from_home_type": null,
       "degree_requirement": "Not mentioned"
-    },
-    {
-      "id": "li-4470714817",
-      "site": "linkedin",
-      "job_url": "https://www.linkedin.com/jobs/view/4470714817",
-      "job_url_direct": null,
-      "title": "Clinical Training Specialist (Remote / Field Based)",
-      "company": "Insulet Corporation",
-      "location": "Utah, United States",
-      "date_posted": "2026-09-25",
-      "job_type": null,
-      "salary_source": null,
-      "interval": null,
-      "min_amount": null,
-      "max_amount": null,
-      "currency": null,
-      "is_remote": true,
-      "job_level": "",
-      "job_function": null,
-      "listing_type": null,
-      "emails": null,
-      "description": null,
-      "company_industry": null,
-      "company_url": "https://www.linkedin.com/company/insulet-corporation",
-      "company_logo": null,
-      "company_url_direct": null,
-      "company_addresses": null,
-      "company_num_employees": null,
-      "company_revenue": null,
-      "company_description": null,
-      "skills": null,
-      "experience_range": null,
-      "company_rating": null,
-      "company_reviews_count": null,
-      "vacancy_count": null,
-      "work_from_home_type": null,
-      "degree_requirement": "Unknown"
     }
   ]
 }
