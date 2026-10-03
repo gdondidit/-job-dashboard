@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-03T11:16:21.779506Z",
-  "total_jobs_saved": 17,
+  "last_run": "2026-10-03T15:19:02.737853Z",
+  "total_jobs_saved": 14,
   "per_term_results": [
     {
       "term": "implementation",
@@ -79,7 +79,7 @@
     },
     {
       "term": "rollout specialist",
-      "count": 61,
+      "count": 62,
       "error": null
     }
   ]
