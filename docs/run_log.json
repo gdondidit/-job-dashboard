@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-05T09:34:42.238233Z",
-  "total_jobs_saved": 15,
+  "last_run": "2026-10-05T18:53:05.524517Z",
+  "total_jobs_saved": 11,
   "per_term_results": [
     {
       "term": "implementation",
@@ -14,17 +14,17 @@
     },
     {
       "term": "client onboarding specialist",
-      "count": 80,
+      "count": 64,
       "error": null
     },
     {
       "term": "customer onboarding specialist",
-      "count": 80,
+      "count": 76,
       "error": null
     },
     {
       "term": "senior onboarding specialist",
-      "count": 67,
+      "count": 62,
       "error": null
     },
     {
@@ -39,17 +39,17 @@
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 69,
+      "count": 72,
       "error": null
     },
     {
       "term": "EMR implementation specialist",
-      "count": 45,
+      "count": 44,
       "error": null
     },
     {
       "term": "EHR implementation specialist",
-      "count": 47,
+      "count": 43,
       "error": null
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "term": "rollout specialist",
-      "count": 47,
+      "count": 46,
       "error": null
     }
   ]
