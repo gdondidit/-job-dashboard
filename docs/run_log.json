@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-09T16:34:57.245499Z",
-  "total_jobs_saved": 29,
+  "last_run": "2026-10-09T21:16:10.408247Z",
+  "total_jobs_saved": 26,
   "per_term_results": [
     {
       "term": "implementation",
@@ -14,7 +14,7 @@
     },
     {
       "term": "client onboarding specialist",
-      "count": 74,
+      "count": 71,
       "error": null
     },
     {
@@ -49,17 +49,17 @@
     },
     {
       "term": "EHR implementation specialist",
-      "count": 41,
+      "count": 40,
       "error": null
     },
     {
       "term": "clinical systems analyst",
-      "count": 78,
+      "count": 79,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 52,
+      "count": 53,
       "error": null
     },
     {
