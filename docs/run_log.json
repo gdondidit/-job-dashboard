@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-17T16:57:43.823984Z",
-  "total_jobs_saved": 26,
+  "last_run": "2026-10-17T19:08:27.460377Z",
+  "total_jobs_saved": 25,
   "per_term_results": [
     {
       "term": "implementation",
@@ -9,12 +9,12 @@
     },
     {
       "term": "onboarding",
-      "count": 50,
+      "count": 80,
       "error": null
     },
     {
       "term": "client onboarding specialist",
-      "count": 73,
+      "count": 71,
       "error": null
     },
     {
@@ -24,12 +24,12 @@
     },
     {
       "term": "senior onboarding specialist",
-      "count": 76,
+      "count": 73,
       "error": null
     },
     {
       "term": "implementation specialist",
-      "count": 70,
+      "count": 80,
       "error": null
     },
     {
@@ -49,27 +49,27 @@
     },
     {
       "term": "EHR implementation specialist",
-      "count": 44,
+      "count": 45,
       "error": null
     },
     {
       "term": "clinical systems analyst",
-      "count": 53,
+      "count": 43,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 46,
+      "count": 26,
       "error": null
     },
     {
       "term": "customer training specialist",
-      "count": 80,
+      "count": 60,
       "error": null
     },
     {
       "term": "escalation specialist",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
