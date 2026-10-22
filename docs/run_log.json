@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-22T08:57:33.729615Z",
-  "total_jobs_saved": 29,
+  "last_run": "2026-10-22T14:29:08.053028Z",
+  "total_jobs_saved": 32,
   "per_term_results": [
     {
       "term": "implementation",
@@ -24,7 +24,7 @@
     },
     {
       "term": "senior onboarding specialist",
-      "count": 76,
+      "count": 77,
       "error": null
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 79,
+      "count": 80,
       "error": null
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "term": "clinical systems analyst",
-      "count": 74,
+      "count": 77,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 52,
+      "count": 53,
       "error": null
     },
     {
