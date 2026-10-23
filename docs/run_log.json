@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-22T22:13:47.682330Z",
-  "total_jobs_saved": 25,
+  "last_run": "2026-10-23T00:56:09.378378Z",
+  "total_jobs_saved": 26,
   "per_term_results": [
     {
       "term": "implementation",
@@ -24,7 +24,7 @@
     },
     {
       "term": "senior onboarding specialist",
-      "count": 74,
+      "count": 69,
       "error": null
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 80,
+      "count": 76,
       "error": null
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "term": "rollout specialist",
-      "count": 49,
+      "count": 50,
       "error": null
     }
   ]
