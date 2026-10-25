@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-24T22:46:08.290141Z",
-  "total_jobs_saved": 22,
+  "last_run": "2026-10-25T00:57:36.769227Z",
+  "total_jobs_saved": 18,
   "per_term_results": [
     {
       "term": "implementation",
@@ -14,17 +14,17 @@
     },
     {
       "term": "client onboarding specialist",
-      "count": 80,
+      "count": 75,
       "error": null
     },
     {
       "term": "customer onboarding specialist",
-      "count": 80,
+      "count": 73,
       "error": null
     },
     {
       "term": "senior onboarding specialist",
-      "count": 71,
+      "count": 68,
       "error": null
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "term": "rollout specialist",
-      "count": 51,
+      "count": 50,
       "error": null
     }
   ]
