@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-29T09:29:34.211195Z",
-  "total_jobs_saved": 37,
+  "last_run": "2026-10-29T16:27:42.452430Z",
+  "total_jobs_saved": 36,
   "per_term_results": [
     {
       "term": "implementation",
@@ -9,12 +9,12 @@
     },
     {
       "term": "onboarding",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
       "term": "client onboarding specialist",
-      "count": 78,
+      "count": 80,
       "error": null
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "term": "EMR implementation specialist",
-      "count": 13,
+      "count": 43,
       "error": null
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "term": "clinical systems analyst",
-      "count": 75,
+      "count": 73,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 51,
+      "count": 50,
       "error": null
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "term": "rollout specialist",
-      "count": 52,
+      "count": 50,
       "error": null
     }
   ]
