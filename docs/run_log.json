@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-29T21:25:47.943847Z",
-  "total_jobs_saved": 35,
+  "last_run": "2026-10-30T01:21:59.828546Z",
+  "total_jobs_saved": 36,
   "per_term_results": [
     {
       "term": "implementation",
@@ -39,12 +39,12 @@
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 76,
+      "count": 75,
       "error": null
     },
     {
       "term": "EMR implementation specialist",
-      "count": 42,
+      "count": 43,
       "error": null
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "term": "clinical systems analyst",
-      "count": 74,
+      "count": 78,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 50,
+      "count": 47,
       "error": null
     },
     {
