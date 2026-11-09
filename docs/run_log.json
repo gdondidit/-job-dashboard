@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-11-09T02:28:51.798456Z",
-  "total_jobs_saved": 18,
+  "last_run": "2026-11-09T10:10:38.626987Z",
+  "total_jobs_saved": 24,
   "per_term_results": [
     {
       "term": "implementation",
@@ -9,7 +9,7 @@
     },
     {
       "term": "onboarding",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
@@ -19,47 +19,47 @@
     },
     {
       "term": "customer onboarding specialist",
-      "count": 65,
+      "count": 44,
       "error": null
     },
     {
       "term": "senior onboarding specialist",
-      "count": 22,
+      "count": 60,
       "error": null
     },
     {
       "term": "implementation specialist",
-      "count": 80,
-      "error": null
-    },
-    {
-      "term": "implementation consultant",
-      "count": 78,
-      "error": null
-    },
-    {
-      "term": "healthcare implementation consultant",
-      "count": 53,
-      "error": null
-    },
-    {
-      "term": "EMR implementation specialist",
       "count": 40,
       "error": null
     },
     {
-      "term": "EHR implementation specialist",
+      "term": "implementation consultant",
+      "count": 76,
+      "error": null
+    },
+    {
+      "term": "healthcare implementation consultant",
+      "count": 52,
+      "error": null
+    },
+    {
+      "term": "EMR implementation specialist",
       "count": 0,
       "error": null
     },
     {
+      "term": "EHR implementation specialist",
+      "count": 40,
+      "error": null
+    },
+    {
       "term": "clinical systems analyst",
-      "count": 58,
+      "count": 18,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 50,
+      "count": 40,
       "error": null
     },
     {
@@ -69,17 +69,17 @@
     },
     {
       "term": "escalation specialist",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
       "term": "deployment specialist",
-      "count": 40,
+      "count": 66,
       "error": null
     },
     {
       "term": "rollout specialist",
-      "count": 39,
+      "count": 10,
       "error": null
     }
   ]
