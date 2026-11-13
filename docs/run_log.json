@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-11-12T18:48:27.668780Z",
-  "total_jobs_saved": 34,
+  "last_run": "2026-11-13T00:05:23.567982Z",
+  "total_jobs_saved": 30,
   "per_term_results": [
     {
       "term": "implementation",
@@ -54,12 +54,12 @@
     },
     {
       "term": "clinical systems analyst",
-      "count": 73,
+      "count": 75,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 47,
+      "count": 49,
       "error": null
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "term": "rollout specialist",
-      "count": 62,
+      "count": 63,
       "error": null
     }
   ]
