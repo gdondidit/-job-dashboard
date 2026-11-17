@@ -1,50 +1,50 @@
 {
-  "last_run": "2026-11-16T17:21:56.002708Z",
-  "total_jobs_saved": 15,
+  "last_run": "2026-11-17T01:03:48.960921Z",
+  "total_jobs_saved": 25,
   "per_term_results": [
     {
       "term": "implementation",
-      "count": 50,
-      "error": null
-    },
-    {
-      "term": "onboarding",
       "count": 80,
       "error": null
     },
     {
+      "term": "onboarding",
+      "count": 70,
+      "error": null
+    },
+    {
       "term": "client onboarding specialist",
-      "count": 15,
+      "count": 57,
       "error": null
     },
     {
       "term": "customer onboarding specialist",
-      "count": 15,
+      "count": 45,
       "error": null
     },
     {
       "term": "senior onboarding specialist",
-      "count": 59,
+      "count": 64,
       "error": null
     },
     {
       "term": "implementation specialist",
-      "count": 77,
+      "count": 80,
       "error": null
     },
     {
       "term": "implementation consultant",
-      "count": 32,
+      "count": 73,
       "error": null
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 61,
+      "count": 44,
       "error": null
     },
     {
       "term": "EMR implementation specialist",
-      "count": 11,
+      "count": 42,
       "error": null
     },
     {
@@ -54,32 +54,32 @@
     },
     {
       "term": "clinical systems analyst",
-      "count": 56,
+      "count": 57,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 5,
+      "count": 42,
       "error": null
     },
     {
       "term": "customer training specialist",
-      "count": 50,
-      "error": null
-    },
-    {
-      "term": "escalation specialist",
       "count": 80,
       "error": null
     },
     {
+      "term": "escalation specialist",
+      "count": 60,
+      "error": null
+    },
+    {
       "term": "deployment specialist",
-      "count": 72,
+      "count": 66,
       "error": null
     },
     {
       "term": "rollout specialist",
-      "count": 52,
+      "count": 51,
       "error": null
     }
   ]
