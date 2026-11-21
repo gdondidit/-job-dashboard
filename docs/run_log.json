@@ -1,85 +1,85 @@
 {
-  "last_run": "2026-11-21T02:03:54.397726Z",
-  "total_jobs_saved": 42,
+  "last_run": "2026-11-21T09:38:09.143492Z",
+  "total_jobs_saved": 39,
   "per_term_results": [
     {
       "term": "implementation",
-      "count": 60,
+      "count": 80,
       "error": null
     },
     {
       "term": "onboarding",
-      "count": 40,
+      "count": 80,
       "error": null
     },
     {
       "term": "client onboarding specialist",
-      "count": 60,
-      "error": null
-    },
-    {
-      "term": "customer onboarding specialist",
-      "count": 80,
-      "error": null
-    },
-    {
-      "term": "senior onboarding specialist",
-      "count": 80,
-      "error": null
-    },
-    {
-      "term": "implementation specialist",
-      "count": 40,
-      "error": null
-    },
-    {
-      "term": "implementation consultant",
-      "count": 70,
-      "error": null
-    },
-    {
-      "term": "healthcare implementation consultant",
       "count": 50,
       "error": null
     },
     {
+      "term": "customer onboarding specialist",
+      "count": 60,
+      "error": null
+    },
+    {
+      "term": "senior onboarding specialist",
+      "count": 60,
+      "error": null
+    },
+    {
+      "term": "implementation specialist",
+      "count": 50,
+      "error": null
+    },
+    {
+      "term": "implementation consultant",
+      "count": 60,
+      "error": null
+    },
+    {
+      "term": "healthcare implementation consultant",
+      "count": 40,
+      "error": null
+    },
+    {
       "term": "EMR implementation specialist",
-      "count": 42,
+      "count": 21,
       "error": null
     },
     {
       "term": "EHR implementation specialist",
-      "count": 25,
+      "count": 4,
       "error": null
     },
     {
       "term": "clinical systems analyst",
-      "count": 61,
+      "count": 68,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 13,
+      "count": 23,
       "error": null
     },
     {
       "term": "customer training specialist",
-      "count": 40,
+      "count": 50,
       "error": null
     },
     {
       "term": "escalation specialist",
-      "count": 40,
-      "error": null
-    },
-    {
-      "term": "deployment specialist",
       "count": 80,
       "error": null
     },
     {
+      "term": "deployment specialist",
+      "count": 50,
+      "error": null
+    },
+    {
       "term": "rollout specialist",
-      "count": 38,
+      "count": 21,
       "error": null
     }
   ]
