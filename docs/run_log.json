@@ -1,50 +1,50 @@
 {
-  "last_run": "2026-11-22T02:34:22.047561Z",
-  "total_jobs_saved": 27,
+  "last_run": "2026-11-22T10:15:57.073503Z",
+  "total_jobs_saved": 34,
   "per_term_results": [
     {
       "term": "implementation",
-      "count": 70,
+      "count": 80,
       "error": null
     },
     {
       "term": "onboarding",
-      "count": 80,
+      "count": 70,
       "error": null
     },
     {
       "term": "client onboarding specialist",
-      "count": 68,
+      "count": 64,
       "error": null
     },
     {
       "term": "customer onboarding specialist",
-      "count": 40,
+      "count": 60,
       "error": null
     },
     {
       "term": "senior onboarding specialist",
-      "count": 50,
+      "count": 45,
       "error": null
     },
     {
       "term": "implementation specialist",
-      "count": 50,
+      "count": 40,
       "error": null
     },
     {
       "term": "implementation consultant",
-      "count": 80,
+      "count": 40,
       "error": null
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 44,
+      "count": 71,
       "error": null
     },
     {
       "term": "EMR implementation specialist",
-      "count": 21,
+      "count": 20,
       "error": null
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "term": "clinical systems analyst",
-      "count": 21,
+      "count": 16,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 11,
+      "count": 29,
       "error": null
     },
     {
@@ -69,17 +69,17 @@
     },
     {
       "term": "escalation specialist",
-      "count": 50,
-      "error": null
-    },
-    {
-      "term": "deployment specialist",
       "count": 80,
       "error": null
     },
     {
+      "term": "deployment specialist",
+      "count": 60,
+      "error": null
+    },
+    {
       "term": "rollout specialist",
-      "count": 47,
+      "count": 7,
       "error": null
     }
   ]
