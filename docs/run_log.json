@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-11-26T00:05:22.240226Z",
-  "total_jobs_saved": 36,
+  "last_run": "2026-11-26T08:06:11.076835Z",
+  "total_jobs_saved": 37,
   "per_term_results": [
     {
       "term": "implementation",
@@ -9,12 +9,12 @@
     },
     {
       "term": "onboarding",
-      "count": 50,
+      "count": 80,
       "error": null
     },
     {
       "term": "client onboarding specialist",
-      "count": 79,
+      "count": 80,
       "error": null
     },
     {
@@ -29,17 +29,17 @@
     },
     {
       "term": "implementation specialist",
-      "count": 50,
+      "count": 80,
       "error": null
     },
     {
       "term": "implementation consultant",
-      "count": 70,
+      "count": 50,
       "error": null
     },
     {
       "term": "healthcare implementation consultant",
-      "count": 80,
+      "count": 40,
       "error": null
     },
     {
@@ -49,17 +49,17 @@
     },
     {
       "term": "EHR implementation specialist",
-      "count": 40,
+      "count": 41,
       "error": null
     },
     {
       "term": "clinical systems analyst",
-      "count": 80,
+      "count": 40,
       "error": null
     },
     {
       "term": "health information management analyst",
-      "count": 25,
+      "count": 55,
       "error": null
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "term": "rollout specialist",
-      "count": 29,
+      "count": 30,
       "error": null
     }
   ]
